@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Dao Serif";
+  src: url("./dao-serif.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #f4ebdc;
+  --ink: #604b37;
+  --muted: #796650;
+  --accent: #ac5737;
+  --serif: "Dao Serif", "Songti SC", "STSong", "SimSun", serif;
+  --sans: "Avenir Next", "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body { margin: 0; color: var(--ink); -webkit-font-smoothing: antialiased; }
+a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+::selection { color: #fff9ee; background: #a56743; }
+[hidden] { display: none !important; }
+.page {
+  position: relative;
+  isolation: isolate;
+  min-height: 720px;
+  height: 100svh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f6f0e6 0%, #f2e6d3 39%, #ebcfaa 67%, #d9aa7d 100%);
+}
+.landscape { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.pre-dawn { position: absolute; inset: 0; background: #83878c; opacity: 0; }
+.morning-light {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 68% 55%, #ffedc9 0%, #f8dfbc80 32%, #faebd400 70%);
+}
+.sun-travel { position: absolute; top: 43%; left: 66%; width: clamp(120px, 12vw, 188px); aspect-ratio: 1; }
+.sun {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #fff9e5, #ffe9b7);
+  box-shadow: 0 0 48px 12px #fff0c822;
+}
+.sun-halo { position: absolute; inset: -160%; border-radius: 50%; background: radial-gradient(circle, #ffe6ad60 0%, #ffe1a92b 30%, #fce0b400 68%); }
+.horizon-light { position: absolute; inset: 42% 0 0; background: radial-gradient(ellipse at 68% 44%, #ffe5b742, #ffe5b700 62%); }
+.mountains { position: absolute; left: 0; bottom: 0; width: 100%; height: 49%; object-fit: fill; }
+.ridge-light { opacity: 1; }
+.travelers { position: absolute; left: 72.4%; bottom: 8.5%; width: clamp(56px, 5.5vw, 90px); isolation: isolate; }
+.traveler { display: block; width: 100%; height: auto; }
+.contact-shadow { position: absolute; z-index: -1; bottom: 1%; left: 9%; width: 84%; height: 5%; background: radial-gradient(ellipse, #48352666, #48352600 72%); }
+.header { position: relative; display: flex; align-items: center; justify-content: space-between; padding: 40px 4.5%; }
+.brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font: 500 14px/1 var(--sans); letter-spacing: .12em; }
+.brand-dot { color: var(--accent); }
+.hero { position: absolute; top: 17%; left: 15%; }
+.eyebrow { margin: 0 0 18px 7px; display: flex; align-items: center; gap: 12px; font: 400 10px/1.5 var(--sans); letter-spacing: .3em; color: var(--muted); }
+.eyebrow > span { width: 23px; height: 1px; background: #a7875c; }
+h1 { position: relative; width: fit-content; margin: 0; font: 500 clamp(132px, 13vw, 204px)/1.2 var(--serif); letter-spacing: -.04em; color: #65462d; }
+.subtitle { margin: 18px 0 0 7px; font: 500 clamp(17px, 1.45vw, 22px)/1.8 var(--serif); letter-spacing: .17em; white-space: nowrap; }
+.subtitle span { margin: 0 .3em; color: #9c7857; }
+.date-line { margin: 24px 0 0 8px; display: flex; align-items: center; gap: 15px; }
+.date-rule { width: 26px; height: 1px; background: #b69977; }
+time { font: 400 15px/1.5 Georgia, "Times New Roman", serif; letter-spacing: .17em; font-variant-numeric: tabular-nums; }
+.side-note { position: absolute; right: 5%; top: 38%; display: flex; align-items: center; gap: 20px; writing-mode: vertical-rl; font: 500 11px/1 var(--serif); letter-spacing: .25em; color: #866f53; }
+.side-note span { height: 35px; width: 1px; background: #aa8c5e66; }
+/* Only compositor-friendly properties move; all landscape detail stays static. */
+.page.is-animated .sun-travel { animation: sunrise 6s cubic-bezier(.22,.61,.36,1) both; }
+.page.is-animated .morning-light { animation: daybreak 6s ease-out both; }
+.page.is-animated .pre-dawn { animation: warm-sky 6s ease-out both; }
+.page.is-animated .ridge-light { animation: ridge-dawn 6s ease-in-out both; }
+.page.is-animated .hero { animation: arrive 1.5s ease-out both; }
+.page[data-motion="paused"] .pre-dawn,
+.page[data-motion="paused"] .ridge-light,
+.page[data-motion="paused"] .sun-travel,
+.page[data-motion="paused"] .morning-light,
+.page[data-motion="paused"] .hero { animation-play-state: paused; }
+@keyframes sunrise { from { transform: translateY(110px); opacity: .3; } to { transform: translateY(0); opacity: 1; } }
+@keyframes warm-sky { from { opacity: .23; } to { opacity: 0; } }
+@keyframes ridge-dawn { 0%, 18% { opacity: 0; } 65% { opacity: .6; } 100% { opacity: 1; } }
+@keyframes daybreak { from { opacity: .15; } to { opacity: 1; } }
+@keyframes arrive { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 1800px) { .hero { left: 19%; } }
+@media (max-width: 900px) {
+  .hero { left: 11%; top: 25%; }
+  .sun-travel { left: 65%; top: 47%; }
+  .mountains { height: 48%; }
+  .travelers { bottom: 8.3%; }
+}
+@media (max-width: 600px) {
+  .page { min-height: 680px; }
+  .header { padding: 25px 24px; }
+  .brand { font-size: 11px; gap: 8px; }
+  .hero { top: 18%; left: 0; width: 100%; text-align: center; }
+  .eyebrow { justify-content: center; margin: 0 0 12px; font-size: 8px; }
+  .eyebrow > span { width: 17px; }
+  h1 { margin: 0 auto; font-size: clamp(116px, 30vw, 156px); }
+  .subtitle { margin: 20px 0 0; font-size: 17px; letter-spacing: .15em; }
+  .date-line { justify-content: center; margin: 23px 0 0; gap: 12px; }
+  time { font-size: 14px; }
+  .date-rule { width: 20px; }
+  .sun-travel { top: 61%; left: calc(57% - 53px); width: 106px; }
+  .mountains { height: 40%; object-fit: cover; object-position: 62% bottom; }
+  .travelers { left: auto; right: 9%; bottom: 6.4%; width: 58px; }
+  .side-note { display: none; }
+  @keyframes sunrise { from { transform: translateY(65px); opacity: .3; } to { transform: translateY(0); opacity: 1; } }
+}
+@media (max-height: 600px) and (min-width: 601px) {
+  .page { min-height: 520px; }
+  .header { padding-top: 22px; }
+  .hero { top: 21%; }
+  h1 { font-size: 115px; }
+  .eyebrow { margin-bottom: 5px; }
+  .subtitle { margin-top: 10px; font-size: 17px; }
+  .date-line { margin-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page.is-animated .sun-travel, .page.is-animated .morning-light, .page.is-animated .hero, .page.is-animated .pre-dawn, .page.is-animated .ridge-light { animation: none; }
+}
