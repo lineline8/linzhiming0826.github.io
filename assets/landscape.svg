@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" preserveAspectRatio="none" fill="none">
   <defs>
-    <linearGradient id="haze" x2="0" y2="1"><stop stop-color="#decab0"/><stop offset="1" stop-color="#e8cfad"/></linearGradient>
-    <linearGradient id="far" x2="0" y2="1"><stop stop-color="#cfb497"/><stop offset="1" stop-color="#dfc19c"/></linearGradient>
-    <linearGradient id="distant" x2="0" y2="1"><stop stop-color="#bd9877"/><stop offset="1" stop-color="#d1ac82"/></linearGradient>
-    <linearGradient id="middle" x2="0" y2="1"><stop stop-color="#ae845e"/><stop offset="1" stop-color="#c39a70"/></linearGradient>
-    <linearGradient id="near" x2="0" y2="1"><stop stop-color="#a17551"/><stop offset="1" stop-color="#ac7b50"/></linearGradient>
-    <linearGradient id="front" x2="0" y2="1"><stop stop-color="#855e40"/><stop offset="1" stop-color="#735138"/></linearGradient>
-    <linearGradient id="river" x1="1090" y1="340" x2="730" y2="690" gradientUnits="userSpaceOnUse"><stop stop-color="#e2c59c" stop-opacity=".25"/><stop offset=".5" stop-color="#e2bc88" stop-opacity=".68"/><stop offset="1" stop-color="#c99c6a" stop-opacity=".8"/></linearGradient>
+    <linearGradient id="haze" x2="0" y2="1"><stop stop-color="#e6d4b8"/><stop offset="1" stop-color="#ead5b5"/></linearGradient>
+    <linearGradient id="far" x2="0" y2="1"><stop stop-color="#dac2a4"/><stop offset="1" stop-color="#e3c9a7"/></linearGradient>
+    <linearGradient id="distant" x2="0" y2="1"><stop stop-color="#c9ab8c"/><stop offset="1" stop-color="#d7b995"/></linearGradient>
+    <linearGradient id="middle" x2="0" y2="1"><stop stop-color="#b89574"/><stop offset="1" stop-color="#c9a67e"/></linearGradient>
+    <linearGradient id="near" x2="0" y2="1"><stop stop-color="#a17c59"/><stop offset="1" stop-color="#ac855e"/></linearGradient>
+    <linearGradient id="front" x2="0" y2="1"><stop stop-color="#805e44"/><stop offset="1" stop-color="#6e513c"/></linearGradient>
+    <linearGradient id="river" x1="1090" y1="340" x2="730" y2="690" gradientUnits="userSpaceOnUse"><stop stop-color="#e2c59c" stop-opacity=".25"/><stop offset=".5" stop-color="#e2bc88" stop-opacity=".47"/><stop offset="1" stop-color="#c99c6a" stop-opacity=".65"/></linearGradient>
     <linearGradient id="slope" x2="1" y2=".8"><stop stop-color="#f6dcb0" stop-opacity=".17"/><stop offset="1" stop-color="#f6dcb0" stop-opacity="0"/></linearGradient>
   </defs>
   <!-- Uneven ridges and partially obscured summits establish distance. -->
@@ -19,7 +19,7 @@
   <!-- The channel narrows into the valley and widens toward the foreground. -->
   <path d="M1089 367c-10 18-28 31-45 41-18 11-40 18-51 29-7 8-2 13 13 19l37 14c18 9 8 19-17 26l-91 21c-27 6-47 15-46 23 1 11 47 16 72 25 31 10 34 23 5 37-29 13-86 20-122 35-32 14-42 32-25 54l-65 15c-26-39-3-60 40-80 40-17 104-24 135-37 20-9 16-13-11-20-32-8-72-13-75-29-2-17 31-27 66-35l98-22c17-4 22-9 8-15l-31-13c-17-8-25-16-13-27 12-13 38-20 57-31 17-10 34-23 45-35Z" fill="url(#river)"/>
   <path d="M0 590C52 578 95 574 142 586L183 598 213 600C267 614 309 638 358 653L401 662 435 660C484 655 531 635 572 625L613 617 641 618C692 604 743 613 782 628L819 638 851 640C903 656 957 664 1004 655L1050 642 1076 641C1120 625 1166 597 1207 592L1243 590 1276 594C1331 594 1380 609 1425 624L1468 634 1500 635C1538 644 1570 638 1600 632V760H0Z" fill="url(#front)"/>
-  <g stroke="#cda474" stroke-width="1" stroke-opacity=".13" stroke-linecap="round">
+  <g stroke="#cda474" stroke-width="1" stroke-opacity=".07" stroke-linecap="round">
     <path d="m24 621 44-6 38 2 35 8m-99 18 38-2 42 7 19 1m69-18 35 12 31 5m331-10 34-8 30-2m-60 16 27-3 21 1m517-18 28-8 35 1 23 5m-45 5 31 2 38 11m25 12 34 7 29 2m-202 17 38-4 43 7 23 1"/>
   </g>
 </svg>

@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" preserveAspectRatio="none" fill="none">
   <defs>
-    <linearGradient id="edge" x1="470" y1="300" x2="1400" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#fff0ca" stop-opacity="0"/><stop offset=".57" stop-color="#ffe1a6" stop-opacity=".75"/><stop offset="1" stop-color="#ffdf9f" stop-opacity=".08"/></linearGradient>
-    <linearGradient id="slope" x1="1060" y1="290" x2="1100" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#fce1ae" stop-opacity=".28"/><stop offset="1" stop-color="#ffe1aa" stop-opacity="0"/></linearGradient>
-    <radialGradient id="mist"><stop stop-color="#ffe8bf" stop-opacity=".2"/><stop offset="1" stop-color="#ffe8bf" stop-opacity="0"/></radialGradient>
+    <linearGradient id="edge" x1="920" y1="280" x2="1210" y2="490" gradientUnits="userSpaceOnUse"><stop stop-color="#ffebc4" stop-opacity="0"/><stop offset=".4" stop-color="#ffe4b5" stop-opacity=".27"/><stop offset="1" stop-color="#ffe4b5" stop-opacity="0"/></linearGradient>
+    <linearGradient id="slope" x1="1060" y1="290" x2="1100" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#fce1ae" stop-opacity=".15"/><stop offset="1" stop-color="#ffe1aa" stop-opacity="0"/></linearGradient>
+    <radialGradient id="mist"><stop stop-color="#fff0d1" stop-opacity=".19"/><stop offset=".5" stop-color="#ffe8c4" stop-opacity=".07"/><stop offset="1" stop-color="#ffe8bf" stop-opacity="0"/></radialGradient>
   </defs>
-  <ellipse cx="1100" cy="350" rx="500" ry="130" fill="url(#mist)"/>
+  <ellipse cx="1050" cy="300" rx="560" ry="165" fill="url(#mist)"/>
   <path d="m958 311 24 3 36-18 29 8 25-13 28 11c49 6 75 40 123 46l48-5 32-14 33 5 43-21 21 4c-51 35-95 49-144 40-53-8-93-31-135-36l-72-10Z" fill="url(#slope)"/>
-  <g stroke="url(#edge)" stroke-linecap="round" stroke-linejoin="round">
-    <path d="m912 331 46-20 24 3 36-18 29 8 25-13 28 11" stroke-width="1.7"/>
-    <path d="m954 435 47-21 22 4 44-20 27 9c37 6 52 26 85 37l32 2 33 13" stroke-width="2"/>
-    <path d="m1047 515 36-15 32 1c53-24 85-21 136-9l37 12 32 3" stroke-width="1.4"/>
-    <path d="m1004 655 46-13 26-1c44-16 90-44 131-49l36-2 33 4" stroke-width="1.8"/>
+  <!-- Light catches only the exposed shoulders, never a continuous outline. -->
+  <g stroke="url(#edge)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1">
+    <path d="m1018 296 29 8 25-13 28 11"/>
+    <path d="m1001 414 22 4 44-20 27 9"/>
   </g>
-  <path d="M1089 367c-11 17-27 30-45 40-18 11-41 20-52 30m-53 81c-27 6-47 15-46 22m71 60c-31 13-86 20-122 35" stroke="#fce3b4" stroke-opacity=".42" stroke-width="1.2" stroke-linecap="round"/>
 </svg>
